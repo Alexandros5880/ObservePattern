@@ -1,4 +1,4 @@
-﻿using ObservePattern.Subject;
+﻿using ObserveStrategy.Subject;
 
 namespace ObservePattern.ConcreteSubject
 {
@@ -14,7 +14,7 @@ namespace ObservePattern.ConcreteSubject
             set
             {
                 _value = value;
-                NotifyObservers();
+                NotifyObservers(_value);
             }
         }
     }

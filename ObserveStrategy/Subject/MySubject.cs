@@ -1,7 +1,7 @@
 ﻿using ObservePattern.Observe;
 using System.Collections.Generic;
 
-namespace ObservePattern.Subject
+namespace ObserveStrategy.Subject
 {
     public class MySubject
     {
@@ -17,11 +17,11 @@ namespace ObservePattern.Subject
             _observers.Remove(observer);
         }
 
-        public void NotifyObservers()
+        public void NotifyObservers(int value)
         {
             foreach(IObserver observer in _observers)
             {
-                observer.Update();
+                observer.Update(value);
             }
         }
     }

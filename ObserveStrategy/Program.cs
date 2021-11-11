@@ -9,8 +9,8 @@ namespace ObservePattern
         static void Main(string[] args)
         {
             DataSource datashource = new DataSource();
-            datashource.AddObserver(new Chart(datashource));
-            datashource.AddObserver(new SpreadSheet(datashource));
+            datashource.AddObserver(new Chart());
+            datashource.AddObserver(new SpreadSheet());
             while(true)
             {
                 Console.Write("\nEnter a Number: ");
