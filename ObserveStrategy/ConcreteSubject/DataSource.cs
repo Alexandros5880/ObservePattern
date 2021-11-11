@@ -14,7 +14,7 @@ namespace ObservePattern.ConcreteSubject
             set
             {
                 _value = value;
-                NotifyObservers(_value);
+                NotifyObservers();
             }
         }
     }

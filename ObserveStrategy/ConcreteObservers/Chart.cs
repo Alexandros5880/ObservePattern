@@ -1,13 +1,19 @@
-﻿using ObservePattern.Observe;
+﻿using ObservePattern.ConcreteSubject;
+using ObservePattern.Observe;
 using System;
 
 namespace ObservePattern.ConcreteObservers
 {
     public class Chart : IObserver
     {
-        public void Update(int value)
+        private DataSource _dataSource;
+        public Chart(DataSource dataSource)
         {
-            Console.WriteLine($"Chart got notifide. Value: {value}");
+            _dataSource = dataSource;
+        }
+        public void Update()
+        {
+            Console.WriteLine($"Chart got notifide. Value: {_dataSource.Value}");
         }
     }
 }
